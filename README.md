@@ -15,3 +15,4 @@ It's my first program :)
 * Add new style "Ascending-descending based"
 * Remake UI, separate array generating from shuffling.
 * Add localization settings
+* Add sound effects
