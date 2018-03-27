@@ -29,11 +29,14 @@ namespace EasySort.Classes
 
         public void StartAsync(SortingArray array, Algorithm algorithm)
         {
-            currentAlgorithm = algorithm;
-            currentArray = array;
+            if (!IsWorking) 
+            {
+                currentAlgorithm = algorithm;
+                currentArray = array;
 
-            workThread = new Thread(DoWork);
-            workThread.Start();
+                workThread = new Thread(DoWork);
+                workThread.Start();
+            }
         }
 
         void DoWork()
